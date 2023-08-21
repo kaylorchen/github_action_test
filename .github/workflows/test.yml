@@ -12,7 +12,7 @@ jobs:
         run: |
           touch job1
       - name: upload artifact
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: job1
           path: ./
@@ -23,7 +23,7 @@ jobs:
         run: |
           touch job2
       - name: upload artifact
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: job2
           path: ./
@@ -32,7 +32,7 @@ jobs:
     needs: [job1, job2]
     steps:
       - name: download artifact
-        uses: action/download-artifact@v3
+        uses: actions/download-artifact@v3
 
       - name: list file
         run: |
