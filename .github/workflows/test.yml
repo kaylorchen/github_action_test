@@ -33,9 +33,10 @@ jobs:
     steps:
       - name: download artifact
         uses: actions/download-artifact@v3
-        with:
-          path: ./job3
 
       - name: list file
         run: |
+          mkdir -p test
+          mv job*/* ./test/
           ls -R
+          
