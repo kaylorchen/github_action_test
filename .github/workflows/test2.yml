@@ -15,6 +15,5 @@ jobs:
           gh run cancel ${{ github.run_id}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.issue.html_url }}
 
 
