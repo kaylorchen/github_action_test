@@ -9,6 +9,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
       - name: test
         run: |
           echo this is a test action
