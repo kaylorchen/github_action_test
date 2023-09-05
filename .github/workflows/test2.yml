@@ -1,0 +1,20 @@
+name: this is a test action
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/test2.yml"
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo this is a test action
+          gh run cancel ${{ github.run_id}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+          
+
