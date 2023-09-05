@@ -16,7 +16,7 @@ jobs:
           echo this is a test action
           gh workflow list
           gh run list
-          # gh run cancel ${{ github.run_id}}
+          gh run cancel ${{ github.run_id}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
