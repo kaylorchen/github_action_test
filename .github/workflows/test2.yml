@@ -1,4 +1,4 @@
-name: this is a test action
+name: this is a test2 action
 
 on:
   workflow_dispatch:
@@ -16,5 +16,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
-          
+
 

@@ -2,8 +2,8 @@ name: this is a test action
 
 on:
   push:
-    branches:
-      - master
+    paths:
+      - ".github/workflows/test.yml"
 jobs:
   job1:
     runs-on: ubuntu-latest
