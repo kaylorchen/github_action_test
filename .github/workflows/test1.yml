@@ -12,7 +12,7 @@ jobs:
         run: |
           if [ ! -f "aaa.txt" ]; then
             echo "File does not exist, skipping remaining steps"
-            exit 0
+            cancelled()
           fi
       - name: Step 1
         run: echo "This is step 1"
