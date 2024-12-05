@@ -6,7 +6,9 @@ on:
       - ".github/workflows/uros.yml"
 jobs:
   build:
-    runs-on: kaylor/microros_base:humble
+    runs-on: ubuntu-latest
+    container:
+      image: kaylor/microros_base:humble
     defaults:
       run:
         shell: bash
