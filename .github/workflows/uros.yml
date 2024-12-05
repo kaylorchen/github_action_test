@@ -5,8 +5,11 @@ on:
     paths:
       - ".github/workflows/uros.yml"
 jobs:
-  job1:
+  build:
     runs-on: kaylor/microros_base:humble
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: build test
         run: |
